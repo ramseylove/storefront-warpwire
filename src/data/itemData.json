@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "itemName": "3/4inch Maple plywood",
+    "description": "Beautiful for cabinets"
+  },
+  {
+    "id": 2,
+    "itemName": "3/4inch Birch plywood",
+    "description": "Great for cabinet boxes"
+  },
+  {
+    "id": 3,
+    "itemName": "3/4inch Oak plywood",
+    "description": "Beautiful for cabinet doors"
+  },
+  {
+    "id": 4,
+    "itemName": "3/4inch MDF ",
+    "description": "Utility for cabinets"
+  },
+  {
+    "id": 5,
+    "itemName": "1/2inch Exterior plywood",
+    "description": "Good Garage cabinets"
+  },
+  {
+    "id": 6,
+    "itemName": "1/2inch Maple plywood",
+    "description": "Beautiful for cabinet door faces"
+  },
+  {
+    "id": 7,
+    "itemName": "1/2inch Birch plywood",
+    "description": "Good for cabinet drawers"
+  },
+  {
+    "id": 8,
+    "itemName": "1/2inch Oak plywood",
+    "description": "Beautiful for cabinet door faces"
+  },
+  {
+    "id": 9,
+    "itemName": "1/2inch MDF ",
+    "description": "For this and that"
+  },
+  {
+    "id": 10,
+    "itemName": "1/2inch Exterior plywood",
+    "description": "Garage cabinets"
+  }
+]
