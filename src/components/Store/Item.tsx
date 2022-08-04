@@ -8,15 +8,24 @@ interface ItemProps {
   id: number;
   itemName: string;
   description: string;
+  onShow: (id: number) => void;
+  showDetailPage: number | null;
 }
 
-const Item = ({ id, itemName, description }: ItemProps) => {
-  const { increaseItemQuantity, showDetailPage, toggleShowDetailsPage } =
-    useShoppingCart();
-
+const Item = ({
+  id,
+  itemName,
+  description,
+  onShow,
+  showDetailPage,
+}: ItemProps) => {
+  const { increaseItemQuantity } = useShoppingCart();
+  const handleOnShow = (itemId: number) => {
+    onShow(itemId);
+  };
   return (
     <>
-      <StoreItem onClick={() => toggleShowDetailsPage(id)}>
+      <StoreItem onClick={() => handleOnShow(id)}>
         <img src="/imgs/wood.jpg" alt={itemName} />
         <div className="controls">
           <div className="details">

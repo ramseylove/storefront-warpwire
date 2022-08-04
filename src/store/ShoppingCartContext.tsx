@@ -19,8 +19,6 @@ type ShoppingCartContextProps = {
   increaseItemQuantity: (id: number) => void;
   decreaseItemQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
-  showDetailPage: number | null;
-  toggleShowDetailsPage: (id: number) => void;
 };
 
 const ShoppingCartContext = createContext({} as ShoppingCartContextProps);
@@ -34,17 +32,6 @@ export const ShoppingCartProvider = ({
 }: ShoppingCartProviderProps) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
-  const [showDetailPage, setShowDetailPage] = useState<number | null>(null);
-
-  const toggleShowDetailsPage = (id: number) => {
-    if (showDetailPage == null || showDetailPage !== id) {
-      setShowDetailPage(id);
-    } else if (showDetailPage === id) {
-      return;
-    } else {
-      setShowDetailPage(null);
-    }
-  };
 
   const toggleCart = () => setIsCartOpen(!isCartOpen);
   const closeCart = () => setIsCartOpen(false);
@@ -55,7 +42,6 @@ export const ShoppingCartProvider = ({
 
   const increaseItemQuantity = (id: number) => {
     setCartItems((currItems) => {
-      console.log(id);
       // check if we do not find an item
       if (currItems.find((item) => item.id === id) == null) {
         // add in an item
@@ -113,8 +99,6 @@ export const ShoppingCartProvider = ({
         toggleCart,
         closeCart,
         isCartOpen,
-        showDetailPage,
-        toggleShowDetailsPage,
       }}
     >
       {children}

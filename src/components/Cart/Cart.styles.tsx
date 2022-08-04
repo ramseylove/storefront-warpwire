@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Button } from "../UI/Button/Button.styles";
 type CartWrapperProps = {
   isCartOpen: boolean;
 };
@@ -49,4 +49,7 @@ export const CartItemWrapper = styled.div`
     padding: 0 7px;
     font-size: 1.5rem;
   }
+`;
+export const CartButton = styled(Button)`
+  font-size: 2.4rem;
 `;

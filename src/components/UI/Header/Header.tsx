@@ -1,11 +1,12 @@
-import Cart from "../../Cart/Cart";
 import { useShoppingCart } from "../../../store/ShoppingCartContext";
+import Cart from "../../Cart/Cart";
 import { GrCart } from "react-icons/gr";
-import { HeaderWrapper, CartButton } from "./Header.styles";
+import { CartButton } from "../../Cart/Cart.styles";
+import { HeaderWrapper } from "./Header.styles";
 
 const Header = () => {
-  const { toggleCart, cartQuantity } = useShoppingCart();
-
+  const { cartQuantity, toggleCart } = useShoppingCart();
+  console.count("header render");
   return (
     <HeaderWrapper>
       <div className="brand">The WoodStore</div>

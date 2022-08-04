@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Button } from "../Button/Button.styles";
 export const HeaderWrapper = styled.header`
   position: sticky;
   top: 0;
@@ -22,8 +21,4 @@ export const HeaderWrapper = styled.header`
     font-weight: 600;
     transform: translate(2px, 22px);
   }
-`;
-
-export const CartButton = styled(Button)`
-  font-size: 2.4rem;
 `;

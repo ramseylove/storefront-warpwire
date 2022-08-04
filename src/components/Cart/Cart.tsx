@@ -1,11 +1,12 @@
 import { useShoppingCart } from "../../store/ShoppingCartContext";
 
 import CartItem from "./CartItem";
+
 import { CartHeading, CartWrapper } from "./Cart.styles";
 
 const Cart = () => {
   const { cartItems, isCartOpen } = useShoppingCart();
-
+  console.count("cart render");
   return (
     <CartWrapper isCartOpen={isCartOpen}>
       <CartHeading>
